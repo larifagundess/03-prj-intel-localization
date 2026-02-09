@@ -121,6 +121,17 @@ body {
 .summary {
   padding: 12px 14px 14px;
   font-size: 12px;
+
+  /* ✅ FIX stray dots in English text on RTL page */
+  direction: ltr;
+  unicode-bidi: plaintext;
+}
+
+/* ALSO fix titles + hover text */
+.card-title,
+.details {
+  direction: ltr;
+  unicode-bidi: plaintext;
 }
 
 /* HOVER OVERLAY */
@@ -171,4 +182,9 @@ body {
     color: #0f172a;
     padding: 0 14px 14px; /* ADD THIS */
   }
+}
+/* Force LTR for English-only text blocks */
+.ltr {
+  direction: ltr;
+  unicode-bidi: plaintext;
 }
